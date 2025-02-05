@@ -1,29 +1,14 @@
 # pokedex
 
-A new Flutter project.
+A flutter project the get in touch with the flutter principles.
 
-## Getting Started
+This project uses the https://pub.dev/packages/openapi_generator package to parse the pokedex openapi.yml file to generate the Api classes used to work with the pokedex api.
 
-This project is a starting point for a Flutter application that follows the
-[simple app state management
-tutorial](https://flutter.dev/to/state-management-sample).
+The configuration of the generator is done inside of the file /lib/src/api.dart by using the openapi_generator_annotations package.
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Run the generator with the command
 
-## Assets
+```bash
+flutter pub run build_runner build --delete-conflicting-outputs
+```
 
-The `assets` directory houses images, fonts, and any other files you want to
-include with your application.
-
-The `assets/images` directory contains [resolution-aware
-images](https://flutter.dev/to/resolution-aware-images).
-
-## Localization
-
-This project generates localized messages based on arb files found in
-the `lib/src/localization` directory.
-
-To support additional languages, please visit the tutorial on
-[Internationalizing Flutter apps](https://flutter.dev/to/internationalization).
